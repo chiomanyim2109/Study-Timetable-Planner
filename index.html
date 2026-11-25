@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Timetable Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <h1>Study Timetable Planner</h1>
+    <p class="subtitle">Plan your study week</p>
+
+    <div class="developer-info">
+      <p><strong>Developer:</strong> OLATUNBOSUN KAYODE EMMANUEL</p>
+      <p><strong>Matric No:</strong> 240404010072</p>
+      <p><strong>Group:</strong> VPE Group 6</p>
+    </div>
+
+    <section class="panel no-print">
+      <h2>Add a Study Session</h2>
+      <form id="session-form">
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="subject-input">Subject or Course</label>
+            <input type="text" id="subject-input" maxlength="40" placeholder="e.g. Engineering Mathematics">
+          </div>
+          <div class="form-row">
+            <label for="day-select">Day</label>
+            <select id="day-select">
+              <option value="0">Monday</option>
+              <option value="1">Tuesday</option>
+              <option value="2">Wednesday</option>
+              <option value="3">Thursday</option>
+              <option value="4">Friday</option>
+              <option value="5">Saturday</option>
+              <option value="6">Sunday</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="start-input">Start Time</label>
+            <input type="time" id="start-input">
+          </div>
+          <div class="form-row">
+            <label for="end-input">End Time</label>
+            <input type="time" id="end-input">
+          </div>
+        </div>
+        <button type="submit" class="btn">Add Session</button>
+      </form>
+      <p id="form-message" class="message" role="alert"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Your Weekly Timetable</h2>
+
+      <div class="summary">
+        <div class="summary-box">
+          <span class="summary-label">Total Study Time</span>
+          <span class="summary-value" id="total-time">0 min</span>
+        </div>
+        <div class="summary-box">
+          <span class="summary-label">Sessions</span>
+          <span class="summary-value" id="session-count">0</span>
+        </div>
+        <div class="summary-box">
+          <span class="summary-label">Busiest Day</span>
+          <span class="summary-value" id="busiest-day">-</span>
+        </div>
+      </div>
+
+      <div id="week-grid" class="week-grid"></div>
+
+      <div class="actions no-print">
+        <button type="button" id="print-btn" class="btn btn-dark">Print Timetable</button>
+        <button type="button" id="clear-btn" class="btn btn-secondary">Clear All Sessions</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed by OLATUNBOSUN KAYODE EMMANUEL | Matric No: 240404010072 | VPE Group 6</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

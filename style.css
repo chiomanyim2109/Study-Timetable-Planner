@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #f5f5f4, #fee2e2);
+  color: #292524;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #991b1b;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: #78716c;
+  margin-bottom: 1.5rem;
+}
+
+.developer-info {
+  background: #ffffff;
+  border-left: 5px solid #b91c1c;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.developer-info p {
+  margin: 0.2rem 0;
+}
+
+.panel {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #7f1d1d;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  padding: 0.7rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #ffffff;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #dc2626;
+  border-color: #dc2626;
+}
+
+.btn {
+  background: #b91c1c;
+  color: #ffffff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #991b1b;
+}
+
+.btn-dark {
+  background: #44403c;
+}
+
+.btn-dark:hover {
+  background: #292524;
+}
+
+.btn-secondary {
+  background: #78716c;
+}
+
+.btn-secondary:hover {
+  background: #57534e;
+}
+
+.message {
+  margin-top: 0.8rem;
+  color: #dc2626;
+  font-size: 0.95rem;
+  min-height: 1.2rem;
+}
+
+/* Summary boxes */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-box {
+  background: #fef2f2;
+  border-radius: 10px;
+  padding: 0.8rem;
+  text-align: center;
+}
+
+.summary-label {
+  display: block;
+  color: #78716c;
+  font-size: 0.85rem;
+}
+
+.summary-value {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #991b1b;
+}
+
+/* Weekly timetable */
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.day-card {
+  background: #fafaf9;
+  border: 1px solid #e7e5e4;
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.day-card.today {
+  border: 2px solid #b91c1c;
+  background: #fffafa;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+
+.day-name {
+  font-weight: bold;
+  color: #7f1d1d;
+  font-size: 1.05rem;
+}
+
+.today-badge {
+  background: #b91c1c;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 10px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.day-total {
+  color: #78716c;
+  font-size: 0.8rem;
+}
+
+.empty-day {
+  color: #a8a29e;
+  font-size: 0.9rem;
+}
+
+.session {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  border-left: 5px solid #b91c1c;
+  border-radius: 6px;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.session-subject {
+  display: block;
+  font-weight: bold;
+  word-break: break-word;
+}
+
+.session-time {
+  display: block;
+  color: #57534e;
+  font-size: 0.85rem;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #b91c1c;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+}
+
+.delete-btn:hover {
+  color: #7f1d1d;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  color: #57534e;
+  font-size: 0.9rem;
+}
+
+/* Printing */
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  .no-print {
+    display: none;
+  }
+
+  .panel,
+  .developer-info {
+    box-shadow: none;
+  }
+}
